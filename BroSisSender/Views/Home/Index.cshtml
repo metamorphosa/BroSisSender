@@ -1,0 +1,49 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <body>
+        <h1><font color="green">Welcome, @User.Identity.Name</font></h1>
+        <div> </div>
+        <a class="logout" asp-controller="Home" asp-action="LogOut">Log out</a>
+        <form asp-controller="Home" method="post">
+            <div class="form">
+                <div>
+                    <h2><font color="grey">Last message: @HomeController.LastMessage</font></h2>
+                </div>
+                <div>
+                    <button class="broMessage" name="button" value="Bro!" asp-action="CheckMessage">Bro!</button>
+                </div>
+                <div>
+                    <button class="sisMessage" name="button" value="Sis!" asp-action="CheckMessage">Sis!</button>
+                </div>
+                <div>
+                    <h1><font color="red">@ViewData["ButtonValue"]</font></h1>
+                </div>
+            </div>
+        </form>
+    </body>
+}
+else
+{
+    <body>
+        <h1><font color="red">You're not logged in</font></h1>
+        <form asp-controller="Home" method="post">
+            <div class="form">
+                <div id="BroMessages">
+                    <h1><font color="#fff">Bro messages: @HomeController.BroMessageCount</font></h1>
+                </div>
+                <div id="SisMessages">
+                    <h1><font color="pink">Sis messages: @HomeController.SisMessageCount</font></h1>
+                </div>
+                <div>
+                    <h2><font color="grey">Last message: @HomeController.LastMessage</font></h2>
+                </div>
+                <div>
+                    <button class="google" asp-action="GoogleLogin">Google</button>
+                </div>
+                <div>
+                    <button class="facebook" asp-action="FacebookLogin">Facebook</button>
+                </div>               
+            </div>
+        </form>
+    </body>
+}

@@ -1,0 +1,82 @@
+﻿button.google {
+    height: 50px;
+    width: 1000px;
+    color: #fff;
+    background: #FF6347;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+button.google:hover {
+    background: #ff3e1b;
+}
+
+button.facebook {
+    height: 50px;
+    width: 1000px;
+    color: #fff;
+    background: #0094ff;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+button.facebook:hover {
+    background: #007aff;
+}
+
+button.broMessage {
+    height: 250px;
+    width: 250px;
+    color: #fff;
+    background: #0094ff;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+button.sisMessage {
+    height: 250px;
+    width: 250px;
+    color: #fff;
+    background: #ed00ff;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+a.logout {
+    background-color: red;
+    box-shadow: 0 1px 0 darkred;
+    color: white;
+    padding: 0.5em 1em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.logout:hover {
+    background-color: #ce0606;
+    cursor: pointer;
+}
+
+a.logout:active {
+    box-shadow: none;
+    top: 1px;
+}
+
+body {
+    background: url(../back.jpg)
+}
+
+.form {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
